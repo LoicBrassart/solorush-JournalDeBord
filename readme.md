@@ -20,6 +20,9 @@
   - nettoyer le sous-dossier
     - retirer la route GET/pokemon
     - créer une route GET/ simple
+- envoyer les sous-dossier ur GHub
+  - git remote add origin git@github.com:LoicBrassart/solorush-JournalDeBord.git
+  - git push -u origin main
 - initialiser une bdd ?
-- créer un PBcaklog
+- créer un PBacklog
 - créer un SBacklog
