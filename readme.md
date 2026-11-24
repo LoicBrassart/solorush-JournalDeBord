@@ -35,18 +35,24 @@ On choisit le sujet, puis:
     - user classique: `CREATE ROLE thisIsMe WITH LOGIN PASSWORD 'myP@ssw0rd';`
   - Créer des databases (projets): `CREATE DATABASE project_name;` ou `CREATE DATABASE project_name OWNER thisIsMe;`
   - Créer des tables (entités): `CREATE TABLE article(id integer not null generated always as identity primary key, title text not null unique);`
-
 - ✅ lier le backend à la bdd
-  - packages `pg` & `@types/pg`
+  - packages `pg` (dependency) & `@types/pg` (devDependency)
   - environnement (`dotenv`)
+    - créer un .env qui contient toutes les infos sensibles (postgres: host, port, user, password, db ; api: port)
+    - ⚠️ ajouter le .env au .gitignore !
   - créer la connexion
+    - créer un `Pool` de connexions à PGSQL (import depuis `pg`)
+    - appeler les variables d'environnement via `process.env.xxxx`
   - créer une première requête
-
-- lier le frontend au backend
-  - useEffect, useState
-  - créer un type TS custom
-  - fetch
-  - .map
+    - créer une route dédiée (ex: GET /logs)
+    - demander au serveur SQL d'exécuter une requête (`db.query`)
+- ✅ lier le frontend au backend
+  - mon composant a besoin de faire qqc "au lancement" (effect). Il doit:
+    - appeler une API (`fetch`)
+    - nettoyer le resultat (`.json()`)
+    - stocker le resultat et redeclencher un affichage (state)
+  - a l'affichage, pour chaque donnée en state j'affiche un fragment de TSX (`.map()`)
+  - [Bonus] créer un type TS custom pour avoir l'autocomplétion sur les sous-propriétés de mon state
 
 - créer un PBacklog
 - créer un SBacklog
