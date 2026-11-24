@@ -33,8 +33,8 @@ On choisit le sujet, puis:
   - Créer des users:
     - superuser (tous les droits): `CREATE ROLE thisIsMe WITH LOGIN SUPERUSER PASSWORD 'myP@ssw0rd';`
     - user classique: `CREATE ROLE thisIsMe WITH LOGIN PASSWORD 'myP@ssw0rd';`
-  - Créer des databases (projets): `CREATE DATABASE projetc_name;`
-  - Créer des tables (entités): `CREATE TABLE table_name( id integer not null generated always as identity primary key, name text not null unique);`
+  - Créer des databases (projets): `CREATE DATABASE project_name;` ou `CREATE DATABASE project_name OWNER thisIsMe;`
+  - Créer des tables (entités): `CREATE TABLE article(id integer not null generated always as identity primary key, title text not null unique);`
 
 - ✅ lier le backend à la bdd
   - packages `pg` & `@types/pg`
@@ -43,6 +43,10 @@ On choisit le sujet, puis:
   - créer une première requête
 
 - lier le frontend au backend
+  - useEffect, useState
+  - créer un type TS custom
+  - fetch
+  - .map
 
 - créer un PBacklog
 - créer un SBacklog
