@@ -54,6 +54,18 @@ On choisit le sujet, puis:
   - a l'affichage, pour chaque donnée en state j'affiche un fragment de TSX (`.map()`)
   - [Bonus] créer un type TS custom pour avoir l'autocomplétion sur les sous-propriétés de mon state
 
+- afficher un seul tuple de ma base
+  - [bdd] une requete SQL
+  - [backend] une nouvelle route GET/logs/:id
+  - [frontend]
+    - react-router
+      - main.tsx: BrowserRouter
+      - App.tsx: Routes
+    - une nouvelle page
+    - un composant Log
+
 - créer un PBacklog
 - créer un SBacklog
 - créer une maquette
+
+Partie enregistree: 6

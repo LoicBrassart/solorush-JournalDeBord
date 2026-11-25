@@ -21,8 +21,16 @@ app.get("/", (req, res) => {
 });
 
 app.get("/logs", async (req, res) => {
-  const { rows } = await db.query("SELECT * FROM log");
+  const { rows } = await db.query("SELECT id,title FROM log");
   res.json(rows);
+});
+
+app.get("/logs/:id", async (req, res) => {
+  const { rows } = await db.query(
+    "SELECT id, title, date, content FROM log WHERE id=$1",
+    [Number(req.params.id)],
+  );
+  res.json(rows[0]);
 });
 
 app.listen(PORT, () => {
