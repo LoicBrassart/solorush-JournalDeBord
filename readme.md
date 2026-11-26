@@ -53,8 +53,7 @@ On choisit le sujet, puis:
     - stocker le resultat et redeclencher un affichage (state)
   - a l'affichage, pour chaque donnée en state j'affiche un fragment de TSX (`.map()`)
   - [Bonus] créer un type TS custom pour avoir l'autocomplétion sur les sous-propriétés de mon state
-
-- afficher un seul tuple de ma base
+- ✅ afficher un seul tuple de ma base
   - [bdd] une requete SQL
   - [backend] une nouvelle route GET/logs/:id
   - [frontend]
@@ -62,10 +61,17 @@ On choisit le sujet, puis:
       - main.tsx: BrowserRouter
       - App.tsx: Routes
     - une nouvelle page
-    - un composant Log
+    - lien dynamique Home->Log
+    - Header omnipresent avec lien ->Home
+
+- supprimer un article
+  - [bdd] une requete SQL
+  - [backend] une nouvelle route DELETE/logs/:id
+  - [frontend]
+    - un bouton "supprimer"
 
 - créer un PBacklog
 - créer un SBacklog
 - créer une maquette
 
-Partie enregistree: 6
+Partie enregistree: 7

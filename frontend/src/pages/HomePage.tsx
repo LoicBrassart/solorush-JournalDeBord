@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
-
-type Log = {
-  id: number;
-  title: string;
-  date: string;
-  content: string;
-};
+import { Link } from "react-router";
+import type { Log } from "../types/Log";
 
 export default function HomePage() {
   const [logs, setLogs] = useState<Log[]>([]);
@@ -23,7 +18,11 @@ export default function HomePage() {
     <>
       <h1>Welcome Home !</h1>
       {logs.map((log) => {
-        return <p>{log.title}</p>;
+        return (
+          <p key={log.id}>
+            <Link to={`/${log.id}`}>{log.title}</Link>
+          </p>
+        );
       })}
     </>
   );
