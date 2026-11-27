@@ -69,9 +69,11 @@ On choisit le sujet, puis:
   - [backend] une nouvelle route DELETE/logs/:id
   - [frontend]
     - un bouton "supprimer"
+    - ajouter une confirmation
+    - ajouter des toasts
 
 - créer un PBacklog
 - créer un SBacklog
 - créer une maquette
 
-Partie enregistree: 7
+Partie enregistree: 9
